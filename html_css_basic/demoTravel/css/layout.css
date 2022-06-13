@@ -1,0 +1,153 @@
+img{
+    object-fit: cover;
+
+}
+
+*{
+    font-family: sans-serif;
+}
+#wapper{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header{
+    width: 100%;
+}
+
+#menu{
+    width: 100%;
+    height: 40px;
+}
+
+
+
+#footer{
+    width: 100%;
+}
+
+#logo{
+    width: 20%;
+    float: left;
+}
+
+#banner{
+    width: 80%;
+    float: left;
+
+}
+
+
+
+#logo_img{
+    width: 100%;
+    height: 250px;
+}
+
+#logo_banner{
+    width: 100%;
+    height: 250px;
+}
+
+.item > li {
+    list-style: none;
+
+}
+
+.item > li:hover {
+    box-shadow: 2px 2px 2px 2px;
+}
+.item > li >a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.item > li >a:hover{
+    color: #333;
+}
+
+.item{
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+}
+
+#menu ul{
+    padding: unset;
+    margin: unset;
+}
+
+/*============ CONTENT ==============*/
+#main_content{
+    width: 100%;
+    display: flex;
+}
+
+#left, #right{
+    width: 20%;}
+
+    #content{
+        width: 80%;}
+
+        .content_item{
+            width: 45%;
+            float: left;
+            text-align: center;
+            margin: 2%;
+            background: #d1e5de;
+            border-radius: 15px;
+
+        }
+
+        .item_description {
+            text-align: justify;
+            padding: 3px 10px;
+            height: 150px;
+            overflow-y: auto;
+        }
+        .item_title {
+            font-size: 20px;
+            text-transform: uppercase;
+            height: 25px;
+        }
+        .item_img{
+            width: 93%;
+            height: 230px;
+            border-radius: 15px;
+        }
+
+        .item_img:hover{
+         transform: scale(1.5);
+         border-radius: 15px;
+         transition: 500ms ease-in-out;
+     }
+     .content_item button {
+        width: 50%;
+        height: 40px;
+        background: aliceblue;
+        margin-bottom: 20px;
+
+    }
+    .content_item button:hover {
+       background: black;
+       color: aliceblue;
+
+   }
+   .old_price {
+    text-decoration: line-through;
+    font-size: small;
+}
+.new_price {
+    font-size: 20px;
+    color: cadetblue;
+}
+.div_img{
+   width: 95%;
+   height: 230px;
+   overflow: hidden;
+   border-radius: 15px;
+   margin: 3%;
+}

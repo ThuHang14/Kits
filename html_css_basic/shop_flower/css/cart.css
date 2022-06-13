@@ -25,8 +25,13 @@ a {
 }
 
 #header {
-    width: 100%;
+    width: 1200px;
     height: 80px;
+    position: fixed;
+    background-color: white;
+    margin-top: 0;
+    z-index: 9;
+    border-bottom: #fa6680 2px groove;
 }
 
 .margin-table {
@@ -71,6 +76,7 @@ h2 {
 
 #footer {
     width: 100%;
+    min-width: 1200px;
     height: 200px;
     background-color: #b57688;
     color: aliceblue;
@@ -104,4 +110,8 @@ h2 {
     background: #b57688;
     border: none;
     margin: 12px 0;
+}
+
+#content-head{
+    padding-top: 80px;
 }

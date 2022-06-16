@@ -1,0 +1,262 @@
+.navbar-light .navbar-brand {
+    color: #FF4545;
+    font-size: 2.0rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    border: 3px solid black;
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    border-color: #ccc;
+  }
+
+#home_carousel{
+    background-color: #FF4545;
+
+}
+.home-carousel-caption{
+    left: 10%;
+    top:140px;
+    right: unset;
+}
+
+.home-carousel-title{
+    color: black;
+    text-shadow: 0px 0px 10px white;
+    font-weight: 900;
+    text-align: left;
+}
+h1.home-carousel-title{
+    font-size: 3rem;
+}
+h6.home-carousel-title{
+    font-size: 1.2rem;
+}
+.home-button{
+    background-color: unset;
+    border: 3px solid white;
+}
+
+
+.collection .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease-in-out;
+}
+
+.collection .card:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.collection .card:hover img {
+    transform: scale(1.2);
+}
+
+.collection .card-body{
+    top: 40%;
+    position: absolute;
+    text-align: center;
+}
+
+.collection .card{
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.collection .card-title{
+    background-color: black;
+    width: 55%;
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    border-radius: 20px;
+    color: white;
+    font-weight: bolder;
+    line-height: 40px;
+}
+
+.collection .card:hover .card-title{
+    background-color: white;
+    color: black;
+    transition: all 500ms ease-in-out;
+ }
+
+ .collection  .btn-primary{
+     background-color: unset;
+     margin-top: 10px;
+ }
+ .collection  .card:hover .btn-primary{
+     background-color: red;
+     transition: all 500ms ease-in-out;
+    
+ }
+ .collection  .card-img-top{
+     width: 100%;
+     transition: all 500ms ease-in-out;
+ }
+
+ .section-title{
+    text-transform: uppercase;
+    margin-top: 40px;
+    font-size: 2.5rem;
+    font-weight: 900; 
+}
+
+.product .card:hover .addCart {
+    border-radius: 1rem 0 0 0;
+}
+.product .addCart {
+    position: absolute;
+    right: 0;
+    bottom: 0.6rem;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.9rem 1.4rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: all 300ms ease-in-out;
+    font-size: 2rem;
+}
+
+.product .side-icons span:hover {
+    background-color: red;
+    color: white;
+}
+.product .side-icons span {
+    font-size: 1.4rem;
+    background-color: white;
+    margin: 0.3rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50%;
+    transition: all 300ms ease-in-out;
+}
+
+.product .card:hover .side-icons {
+    transform: translate(0%, -50%);
+}
+.product .side-icons {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transform: translate(80%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    transition: all 500ms ease-in-out;
+}
+
+.product .addCart:hover {
+    background-color: red;
+    color: white;
+}
+
+.product .side-icons {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transform: translate(80%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    transition: all 500ms ease-in-out;
+}
+.product .card{
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.product .price{
+    color: blue;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.product .old_price{
+    color: red;
+    text-decoration: line-through;
+}
+.product .card-title{
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    font-weight: bolder;
+    line-height: 40px;
+    font-size: 1.3rem;
+}
+
+.advert_img{
+    width: 100%;
+    aspect-ratio:3/3;
+    z-index: 10;
+}
+
+.advert .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+.advert .item:hover .content {
+    color: white;
+}
+.advert .item .content a {
+    text-decoration: none;
+    color: black;
+}
+.advert .item:hover .content a {
+    color: white;
+}
+
+.advert .left {
+    right: 10%;
+}
+.advert .right {
+    left: 10%;
+}
+
+.advert .item:hover::after {
+    background-color: rgba(223, 74, 74, 0.4);
+   
+}
+
+.advert .item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    
+}
+
+footer{
+    background-color:#222;
+    color:white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer ul{
+    padding: unset;    
+}
+footer li{
+    display: block;
+    line-height: 30px;
+    
+}
+footer li a{
+    text-decoration: none;
+    color: white;
+}
+
+footer li a:hover{
+    color: red;
+}

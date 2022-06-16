@@ -1,0 +1,242 @@
+img{
+object-fit: cover;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #f8fafc;
+}
+.navbar-shop{ 
+    color : #FF4545;
+    font-size : 2rem;
+    padding : 0.5rem;
+    font-weight : 600;
+    border : 3px solid black;}  
+
+.icon-cart-nav{
+    border: 3px solid #FF4545;
+    border-radius: 50%;
+    background: #FF4545;
+    color: white;left: -8px}
+#Mycarousel{
+    background-color: #FF4545;
+}
+.nav-img{
+    margin-left: auto;
+    margin-right: auto;
+}
+.carousel-caption-div h1{
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.carousel-caption-div button{
+    background-color: unset;
+    border: 3px solid white;
+    border-radius: 11px;
+    padding: 6px 30px;
+    color: white;
+}
+
+.carousel-caption-div button:hover{
+    background-color: white;
+    color:#FF4545;
+}
+
+
+.carousel-caption-div{
+    text-align: left;
+    top: 15%;
+    text-shadow: 0px 0px 10px white;
+    font-weight: 900;
+}
+
+.uppercase{
+    text-transform: uppercase;
+
+}
+
+.section-title{
+    font-size: 2.5rem;
+}
+
+.cart-content-img{
+    position: absolute;
+    top: 25%;
+    z-index: 2;
+}
+
+.cart-content-img h5{
+    color: white;
+    text-shadow: 0 0 12px grey;
+}
+
+.collection .card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* opacity: 1; */
+    visibility: hidden;
+    z-index: 1;
+    transition: all 150ms ease-in-out;
+}
+
+.collection .card:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+
+.collection .card:hover .cart-content-img h5{
+    border-radius: 15px;
+    background: #f8fafc;
+    color: brown;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.collection .card:hover .cart-content-img a{
+    background-color: #FF4545;
+    color: white;
+    border: none;
+}
+.cart-content-img a{
+    background-color: unset;
+    color: white;
+    border: 1px solid;
+}
+.img-frame{
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.old-price{
+    font-size: small;
+    text-decoration: line-through;
+}
+.new-price{
+    color: brown;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.side-icons{
+    position: absolute;
+    right: 0;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(55%,0%);
+}
+
+.side-icons span{
+    color: brown;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.side-icons span:hover{
+    text-align: center;
+    color: rgb(223, 142, 196);
+    margin: 10px;
+    padding: 5px;
+
+}
+
+.icon-cart:hover i{
+    color: rgb(223, 142, 196);
+}
+
+
+.product .card:hover .side-icons{
+    transform: translate(0%,0%);
+    transition: all 300ms ease-in-out;
+}
+.card-body p {
+    margin-bottom: 0;
+}
+
+.icon-cart{
+    text-align: end;
+    margin: 0px 15px 4px 0;
+}
+.card{
+    overflow: hidden;
+}
+
+.adv-img{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.adv-text{
+    position: absolute;
+    top: 30%;
+    width: fit-content;
+    left: 10%;
+    color: white;
+    text-shadow: 0 0 12px grey;
+    z-index: 1;
+    transform: translate(-200%,0%);
+}
+
+.advertisment .card::after{
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: rgba(97, 29, 74, 0.2);
+visibility: hidden;
+}
+.advertisment .card:hover::after{
+    visibility: visible;
+}
+
+.advertisment .card:hover .adv-text{
+    transform: translate(0%,0%);
+    transition: all 300ms ease-in-out;
+    visibility: visible;
+}
+
+.slider-frame{
+    height: 100px;
+    background: #DDDDDD;
+    border: 2px double grey;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+.img-partner{
+    height: 100%;
+}
+
+.footer{
+    color: #DDDDDD;
+    background: #222;
+    margin-top: 40px;
+    padding: 22px;
+    
+}
+
+li{
+    list-style: none;
+}
+.mr10{
+    margin-right: 10px;
+}
+
+/* ============== CONTACT ================= */
+.contact span:hover{
+    color: #FF4545;
+}

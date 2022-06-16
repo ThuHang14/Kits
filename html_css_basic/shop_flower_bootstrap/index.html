@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> 
+<link rel="stylesheet" href="css/index.css">
+</head>
+  <body>
+      
+    <div class="container-fluid">
+        <!-- header -->
+        <div class="container mb-2 mt-1">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+    <div class="flex-menu">
+        <a class="navbar-brand navbar-shop">
+            Shop
+        </a>
+    </div>
+    <div class="flex-nav">
+    
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Trang chủ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Sản phẩm </a>
+                      </li>
+                     
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Cửa hàng
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">5 Láng Hạ</a></li>
+                          <li><a class="dropdown-item" href="#">20 Hai bà Trưng</a></li>
+                          <li><a class="dropdown-item" href="#">120 Trần Quang Khải</a></li>
+                        </ul>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Đăng nhập</a>
+                      </li>
+    
+                      <li class="nav-item flex">
+                        <a class="nav-link" href="#">
+                            <img src="/images/vn.png" height="30" alt="Viet Nam" style="
+                            margin-top: -3px;
+                        ">
+                        </a>
+                    </li>
+                        <li>
+                        <a class="nav-link" href="#">
+                            <img src="/images/en.png" height="30" alt="English" style="
+                            margin-top: -3px;
+                        ">
+                        </a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-cart-shopping " style="font-size:1.2rem;">
+                            <sup class="cart-number icon-cart-nav" >20</sup>
+                            </i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+    </div>
+    
+              </nav>
+        </div>
+        <!-- carousel -->
+        <div id="Mycarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#Mycarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#Mycarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/carousel_01.png" class="d-block w-75 nav-img"  alt="...">
+              <div class="carousel-caption d-none d-md-block carousel-caption-div">
+                <h5>Độc quyền</h5>
+                <h1>Up to 50% off on sale</h1>
+                <h5>Nhận ưu đãi đặc biệt</h5>
+                <button>Chi tiết</button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/carousel_02.png" class="d-block w-75 nav-img" alt="...">
+              <div class="carousel-caption d-none d-md-block carousel-caption-div">
+                <h5>Độc quyền</h5>
+                <h1>Up to 50% off on sale</h1>
+                <h5>Nhận ưu đãi đặc biệt</h5>
+                <button>Chi tiết</button>
+              </div>  
+            </div>
+            
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#Mycarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#Mycarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- colection -->
+<div class="container">
+  <div class="row collection text-center">
+<div class="container-fluid text-center">
+  <h2 class="section-title uppercase mt-5"> Bộ sưu tập hoa </h2>
+  <img src="images/flower_string.png" alt="" width="30%">
+</div>
+
+      <!-- item -->
+      <div class="col-md-4 col-sm-6 mt-4">
+        <div class="card">
+          <div class="img-frame">
+            <img src="images/products/hoasn.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body cart-content-img container text-center">
+            <h5 class="card-title">Hoa Sinh nhật</h5>
+            <a href="#" class="btn btn-danger">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mt-4">
+        <div class="card">
+          <div class="img-frame">
+            <img src="images/products/hoa4.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body cart-content-img container text-center">
+            <h5 class="card-title">Hoa Tặng</h5>
+            <a href="#" class="btn btn-danger">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mt-4">
+        <div class="card">
+          <div class="img-frame">
+            <img src="images/products/hoakt.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body cart-content-img container text-center">
+            <h5 class="card-title">Hoa Khai Trương</h5>
+            <a href="#" class="btn btn-danger">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mt-4">
+        <div class="card">
+          <div class="img-frame">
+            <img src="images/products/hoa5.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body cart-content-img container text-center">
+            <h5 class="card-title">Hoa Cưới</h5>
+            <a href="#" class="btn btn-danger">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mt-4">
+        <div class="card">
+          <div class="img-frame">
+            <img src="images/products/hoa6.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body cart-content-img container text-center">
+            <h5 class="card-title">Hoa Để bàn</h5>
+            <a href="#" class="btn btn-danger">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mt-4">
+        <div class="card">
+          <div class="img-frame">
+            <img src="images/products/hoa1.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body cart-content-img container text-center">
+            <h5 class="card-title">Hoa Khô</h5>
+            <a href="#" class="btn btn-danger">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+  </div>
+</div>
+
+ <!-- colection - new product -->
+ <div class="container">
+  <div class="row product">
+<div class="container-fluid text-center">
+  <h2 class="section-title uppercase mt-5">Sản phẩm mới</h2>
+  <img src="images/flower_string.png" alt="" width="30%">
+</div>
+
+<!-- item -->
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoacm.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoa2.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoa3.png" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoa4.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoa5.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoa6.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoa7.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoa8.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoa9.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoacuoi.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoasn.png" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-6 mt-4">
+  <div class="card">
+    <div class="img-frame">
+      <img src="images/products/hoakt.jpg" class="card-img-top" alt="...">
+    </div>
+      
+      <ul class="side-icons">
+        <span><i class="fa-solid fa-heart"></i></span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span><i class="fa-solid fa-align-justify"></i></span>
+      </ul>
+    <div class="card-body container text-center">
+      <h5 class="card-title">Hoa Sinh nhật</h5>
+      <p>
+        <span class="new-price">200.000</span>
+        <span class="old-price">250.000</span>
+      </p>
+    </div>
+    <div class="icon-cart">
+      <i class='bx bxs-cart bx-tada' style="font-size: 2rem;
+      color: brown;" ></i>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+ <!-- advertisment -->
+ <div class="container">
+  <div class="row advertisment">
+<div class="container-fluid text-center">
+  <h2 class="section-title uppercase mt-5">quảng cáo</h2>
+  <img src="images/flower_string.png" alt="" width="30%">
+</div>
+<!-- item -->
+<div class="col-md-6 adv-item">
+  <div class="card">
+    <img src="images/products/promo7.jpg" class="adv-img" alt="">
+    <div class="adv-text">
+      <h5>Độc quyền</h5>
+      <h3>Bộ sưu tập hè</h3>
+      <h6>Chi tiết</h6>
+    </div>
+  </div>
+  <!-- item -->
+</div>
+<div class="col-md-6 adv-item">
+  <div class="card">
+    <img src="images/products/promo8.jpg" class="adv-img" alt="">
+    <div class="adv-text" >
+      <h5>Độc quyền</h5>
+      <h3>Bộ sưu tập hè</h3>
+      <h6>Chi tiết</h6>
+    </div>
+  </div>
+  
+</div>
+
+  </div>
+</div>
+
+ <!-- partner -->
+ <div class="container">
+  <div class="row partner">
+<div class="container-fluid text-center">
+  <h2 class="section-title uppercase mt-5">đối tác </h2>
+  <img src="images/flower_string.png" alt="" width="30%">
+</div>
+
+<div class="container slider-frame">
+  <img class="mr10 img-thumbnail img-partner" src="images/products/brand1.png">
+  <img class="mr10 img-thumbnail img-partner" src="images/products/brand2.png">
+  <img class="mr10 img-thumbnail img-partner" src="images/products/brand3.png">
+  <img class="mr10 img-thumbnail img-partner" src="images/products/brand4.png">
+  <img class="mr10 img-thumbnail img-partner" src="images/products/brand5.png">
+  <img class="mr10 img-thumbnail img-partner" src="images/products/brand6.png">
+  <img class="mr10 img-thumbnail img-partner" src="images/products/brand7.png">
+  <img class="mr10 img-thumbnail img-partner" src="images/products/brand1.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand2.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand3.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand4.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand5.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand6.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand7.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand1.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand2.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand3.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand4.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand5.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand6.png">
+<img class="mr10 img-thumbnail img-partner" src="images/products/brand7.png">
+</div>
+
+  </div>
+</div>
+
+        <!-- footer -->
+      </div>
+      <div class="cotainer-fluid footer">
+      <div class="container ">
+        <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <ul class="menu-list">
+          <p class="h4">MỞ RỘNG</p>
+          <li class="menu-item"> MỞ RỘNG </li>
+          <li class="menu-item"> Nhãn Hiệu </li>
+          <li class="menu-item"> Phiếu Quà Tặng </li>
+          <li class="menu-item"> CHi Nhánh </li>
+          <li class="menu-item"> Đặc Biệt </li>
+        </ul> 
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <ul class="menu-list">
+            <p class="h4">THÔNG TIN</p>
+            <li class="menu-item"> THÔNG TIN </li>
+            <li class="menu-item"> Về Chúng Tôi </li>
+            <li class="menu-item"> Chính Sách Bảo Mật </li>
+            <li class="menu-item"> Điều Khoản và Điều Kiện </li>
+            <li class="menu-item"> Liên Hệ </li>
+            <li class="menu-item"> Tìm Chúng Tôi </li>
+          </ul> 
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <ul class="menu-list">
+                <p class="h4"> TÀI KHOẢN</p>
+                <li class="menu-item"> TÀI KHOẢN </li>
+                <li class="menu-item"> Tài Khoản Của Tôi </li>
+                <li class="menu-item"> Lịch Sử Mua Hàng </li>
+                <li class="menu-item"> Danh Sách Muốn Mua </li>
+                <li class="menu-item"> Bản Tin </li>
+                <li class="menu-item"> Lợi Nhuận </li>
+            </ul> 
+            </div>
+          <div class="col-md-3 col-sm-6">
+            <ul class="menu-list">
+                <p class="h4">Contact us  </p>
+                <li class="menu-item"> CONTACT US </li>
+                <li class="menu-item">   Hà Nội </li>
+                <li class="menu-item">  abc@gmail.com </li>
+                <li class="menu-item">  012345678 </li>
+               <img src="images/products/payment.png"  alt="">
+              </li>
+        
+          
+            </ul> 
+            </div> 
+      </div>
+      </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>

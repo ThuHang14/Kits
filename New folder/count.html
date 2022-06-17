@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+$(document).ready(function(){
+    $('#btn').click(function(){
+    let pomt = pomt("nhap so muon dem")
+    count(pomt)
+    alert(pomt)
+})
+
+function count(pomt){
+    let = ""
+   
+}
+
+function swichNum(num){
+    switch (num) {
+            case 0:
+            return num = "linh"
+            break;
+            case 1:
+            return num = "một"
+            break;
+            case 2:
+            return num = "hai"
+            break;
+            case 3:
+            return num = "ba"
+            break;
+            case 4:
+            return num = "bốn"
+            break;
+            case 5:
+            return num = "năm"
+            break;
+            case 6:
+            return num = "sáu"
+            break;
+            case 7:
+            return num = "bảy"
+            break;
+            case 8:
+            return num = "tám"
+            break;
+            case 9:
+            return num = "chín"
+            break;
+    
+        default:
+            break;
+    }
+}
+
+})
+    </script>
+</head>
+<body>
+    <input type="number" id="quantity" name="quantity" min="0" max="9">
+    <button id="btn">count</button>
+</body>
+</html>

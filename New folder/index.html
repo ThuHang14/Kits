@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('#action').click(function(){
+            //     alert("ok")
+            // });
+
+            // $('#message').click(function(){
+            //     alert("p")
+            // });
+
+            // $('h3').click(function(){
+            //     alert("h3")
+            // });
+
+            // $('body').click(function(){
+            //     alert("13232")
+            // });
+
+            // $('#action').click(function(){
+            //     $('h3').addClass('myStyle').removeClass('myStyles')
+
+            // });
+
+            // $('#action').dblclick(function(){
+            //     $('h3').addClass('myStyles').removeClass('myStyle')
+
+            // });
+
+            // $('#release').click(function(){
+            //     $('#my_id').toggleClass('myStyle')
+            // });
+
+            // $('#hidden').click(function(){
+            //     $('.img').toggleClass('hidden')
+            // });
+
+            // $(document).keydown(function(e){
+            //     if(e.which==13){
+            //         alert('ok')
+            //     }
+            // });
+
+// dialog thong bao
+
+            //  $('#action').click(function(){
+            //     $('#message').show(500,function(){});
+            // });
+
+            // $('#release').click(function(){
+            //     $('#message').hide(500,function(){
+
+            //     });
+            // });
+
+            // $('#hidden').click(function(){
+            //     $('#message').toggle(500,function(){
+
+            //     });
+            // });
+
+            // $('#dialog-close').click(function(){
+            //     // $('#dialog').hide(500,function(){})
+            //     $('#dialog').slideUp()
+            // })
+
+            // $('#release').click(function(){
+            //     $('#dialog').show(500,function(){})
+            //     // $('#dialog').slideDown()
+
+            // });
+
+ // click action gach chan tat ca cac dong cua phan message
+            // $('#action').click(function(){
+            //     $('.my_message').css(
+            //         {'text-decoration': 'underline',
+            //             'background':'red',
+            //             'color' : 'white'})
+            // })
+//click doi text
+            // $('#action').click(function(){
+            //    alert($('#message').text())
+            //    let pomt = prompt("text new")
+            //    $('#message').html(pomt)
+            //    .css(
+            //        {'text-decoration': 'underline',
+            //        'color' : 'blue'}
+            //        )
+            // })
+            // $('#release').click(function(){
+            //    let pomt = prompt("text new")
+            //    $('#message').append(pomt)
+            // })
+//click empty
+                // $('#action').click(function(){
+                //     $('#message').empty()
+                // })
+//this text
+                // $('.my_message').click(function(){
+                //     alert($(this).text())
+                // })
+
+                $('#action').click(function(){
+                    $('.my_message').each(function(){
+                        alert($(this).text())
+                    })
+                })
+
+        });
+    </script>
+
+    <style>
+        .myStyle{
+            background-color: aquamarine;
+        }
+        .myStyles{
+            background-color: rgb(193, 127, 255);
+        }
+
+        .hidden{
+            display: none;
+        }
+        #dialog-close{
+            background: aliceblue;
+            position: absolute;
+            padding: 10px;
+            box-shadow:2px 2px 2px;
+            right: 3px;
+        }
+
+        #dialog{
+            margin: 15px;
+            height: 500px;
+            background: rgb(247, 245, 245);
+            box-shadow:2px 2px 2px 2px;
+            width: 500px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #dialog-title{
+            background-color: rgb(9, 12, 11);
+            width: 100%;
+            height: 40px;
+            position: relative;
+        }
+
+        #dialog-title p{
+           color: aliceblue;
+           padding: 10px;
+        }
+
+        #dialog-close:hover{
+            background-color: rgb(221, 42, 42);
+            color: rgb(243, 242, 242);
+        }
+        .dialog_content{
+            font-size: 17px;
+            padding: 14px;
+            overflow: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h3 id="h3">Jquery demo</h3>
+    <div id="message">
+        <p class="my_message" id="my_id">day la ung dung jquery 1</p>
+        <p class="my_message"> duoc viet tai multiCamus</p>
+        <p class="my_message">tai tro boi NIPA</p>
+    </div>
+
+
+    <button id="action">
+        action
+    </button> 
+    
+    <button id="release">
+        release
+    </button>
+
+    <button id="hidden">
+        hidden
+    </button>
+    <div class="img hidden">
+        <img src="https://i.pinimg.com/736x/b7/55/0d/b7550d58517bd85c7946b25082d21369.jpg" alt="">
+    </div>
+
+    <div id="dialog" >
+        <div id="dialog-title">
+            <span id="dialog-close">X</span>
+            <p>thongbao</p>
+        </div>
+        <div class="dialog_content">
+            <img src="https://i.pinimg.com/236x/57/8e/bc/578ebcfba95ec68edaf1b7b5bee2b932.jpg" width="50%" height="50%" alt="">
+        </div>
+    </div>
+</body>
+</html>

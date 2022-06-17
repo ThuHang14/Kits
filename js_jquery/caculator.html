@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+              var st =  $(this).text()
+
+              switch(st){
+                    case "C" :
+                    $('#screen').text("");
+                    break;
+
+                    case "+/-" :
+                        var tmp = $('#screen').text();
+                        tmp = parseFloat(tmp);
+                        tmp = -tmp;
+                        $('#screen').text(tmp);
+                    
+                    break;
+
+                    case "%" :
+                        var tmp = $('#screen').text();
+                        tmp = parseFloat(tmp);
+                        tmp = tmp/100;
+                        $('#screen').text(tmp);
+                    
+                    break;
+
+                    case "=":
+                        var x;
+                        var tmp = $('#screen').text();
+                        tmp = "x = " +tmp
+                        console.log(tmp)
+                        eval(tmp)
+                        x = x.toFixed(2) 
+                        console.log(tmp)
+
+                        $('#screen').text(x);
+                        break;
+
+                    default:
+                        var tmp = $('#screen').text();
+                        tmp = tmp + st;
+                        $('#screen').text(tmp);
+                        break;
+              }
+            })
+        })
+    </script>
+
+    <style>
+        #caculator{
+            border: 1px gray solid;
+            width: fit-content;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+        }
+        button{
+            font-size: 30px;
+    font-family: fantasy;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 15px;
+        }
+
+        button:hover{
+            background: grey;
+            color: white;
+            box-shadow: black 2px 2px;
+        }
+        .top{
+            background: rgb(151, 149, 149);
+        }
+        .right{
+            background: orange;
+        }
+        .hero{
+            width: 100%;
+        }
+        #screen{
+            border-radius: 15px;
+    height: 130px;
+    border: 1px solid;
+    font-size: 32px;
+    text-align: end;
+    padding-right: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="caculator">
+        <table>
+            <tr><td colspan="4" id="screen"></td></tr>
+            <tr></tr>
+            <tr>
+                <td><button class="top">C</button></td>
+                <td><button class="top">+/-</button></td>
+                <td><button class="top">%</button></td>
+                <td><button class="top">/</button></td>
+            </tr>
+
+            <tr>
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+                <td><button class="right">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button>4</button></td>
+                <td><button>5</button></td>
+                <td><button>6</button></td>
+                <td><button class="right">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button>1</button></td>
+                <td><button>2</button></td>
+                <td><button>3</button></td>
+                <td><button class="right">+</button></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" ><button class="hero">0</button></td>
+                <td><button>.</button></td>
+                <td><button class="right">=</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

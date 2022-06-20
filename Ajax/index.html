@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+// 1
+                // $.ajax({
+                //     url : 'test.php',
+                //     success : function(result){
+                //             $('#content').append(result)
+                //     }
+                // });
+
+            //     $.get(
+            //     'test.php', //url
+            //     {name : 'Hang',age : 123},
+            //     function(data,status){
+            //         $('#content').append(data);
+            //     }
+            // );
+
+// 2
+            // var myName = $('#name').val()
+            // var myAge = $('#age').val()
+            //     $.get(
+            //     'test.php', //url
+            //     {name : myName, age : myAge},
+            //     function(data,status){
+            //         $('#content').append(data);
+            //     }
+            // );
+
+//3
+            var myName = $('#name').val()
+            var myAge = $('#age').val()
+                $.getJSON(
+                    'testJson.php', //url
+                {name : myName, age : myAge},
+                    function(data){
+                    $.each(data,function(index,filed){
+                        $('#content').append('INDEX : '+index+" FILE : "+filed + "<br>");
+                    });
+
+                    if(index == "tmp")
+                    $.each
+                    $.each(data,function(index,filed){
+                        $('#content').append('tmp index : '+i+" tmp value : "+d + "<br>");
+                    })
+                }
+            );
+
+
+
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+<!-- 1 -->
+    <!-- <button>
+        Lay noi dung
+    </button> -->
+
+<!-- 2 3 -->
+    <input type="text" name="" id="name">
+    <br>
+    <input type="text" name="" id="age">
+    <button>
+        Lay noi dung
+    </button>
+</body>
+</html>

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Validation demo</title>
+	<script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#action").click(function(){
+				var operator = $('#operator').val();
+				var inputString = $('#input_string').val();
+				var partternString = $('#parttern').val();
+				var modifierString = "";
+				$('.modifier').each(function(){
+					if(this.checked)
+						modifierString += $(this).val();
+				});
+
+				var replaceString = $('#replace').val();
+
+				var re = new RegExp(partternString, modifierString);
+				var result;
+				switch(operator){
+					case "search":
+						result = inputString.search(re);
+						break;
+					case "match":
+						result = inputString.match(re);
+						break;
+					case "replace":
+						result = inputString.replace(re, replaceString);
+						break;
+					case "test":
+						result = inputString.test(inputString);
+						break;
+				}				
+				$('#result').text(result);
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Thao tác</td>
+			<td>
+				<select id="operator">
+					<option value="search">Search</option>					
+					<option value="match">Match</option>					
+					<option value="replace">Replace</option>					
+					<option value="test">Test</option>					
+					<option value=""></option>					
+				</select>
+			</td>			
+		</tr>
+		<tr>
+			<td>Đầu vào:</td>
+			<td><textarea id="input_string"></textarea></td>			
+		</tr>
+		<tr>
+			<td>Xâu mẫu:</td>
+			<td><input type="text" id="parttern"></td>			
+		</tr>
+		<tr>
+			<td>Phạm vi:</td>
+			<td><input type="checkbox" class="modifier" value="i">i
+				<input type="checkbox" class="modifier" value="g">g
+				<input type="checkbox" class="modifier" value="m">m</td>			
+		</tr>
+		<tr>
+			<td>Xâu thay thế:</td>
+			<td><input type="text" id="replace"></td>			
+		</tr>
+		<tr>
+			<td><button id="action">Thực hiện</button></td>			
+		</tr>
+		<tr>
+			<td>Kết quả:</td>
+			<td><div id="result"></td>			
+		</tr>
+	</table>
+</body>
+</html>

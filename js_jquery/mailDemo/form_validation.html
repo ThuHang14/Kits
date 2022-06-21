@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          const name = $('fullname-error')
+
+            $('#myForm').validate(
+                {
+                    rules: {
+                        fullname : {
+                            required : true,
+                            maxlength : 30,
+                        },
+                        password :{
+                            minlength : 5,
+                        },
+                        income:{
+                            range : [1000000 , 10000000]
+                        },
+                        email : {
+                            required : true,
+                            email : true,
+                            remote : 'checkMail.php'
+                        },
+                        facebook : {
+                            required : true,
+                            url : true
+                        },
+                        phone: {
+                            required : true,
+                            digit : true
+                        },
+                        retyped_password : {
+                            equalTo : '#password'
+                        },
+                        hometown : {
+                            required : true
+                        },
+                        global : {
+                            required : true
+                        },
+                        class : {
+                            required : true
+                        },
+                        gender : {
+                            required : true
+                        },
+                        'hobbies[]' : {
+                            required : true,
+                            minlength : 2,
+                        }
+                    },
+                    messages : {
+                        fullname : {
+                            required : "ho ten khong duoc bo trong",
+                            maxlength : "mat khau khong dai hon 10 ky tu",
+                            minlength : "mat khau qua ngan "
+                        },
+                        password :{
+                            minlength : "mat khau khong hop le"
+                        },
+                        income:{
+                            range : "k hop le"
+                        },
+                        email : {
+                            required : "k de trong mail",
+                            email : "mail chua dung dinh dang",
+							remote : 'da co mail'
+                        },
+                        facebook : {
+                            required : "k de trong link facebook",
+                            url : "facebook chua dung dinh dang"
+                        },
+                        phone: {
+                            required : "khong de trong o dien thoai",
+                            digit : "so dien thoai khong hop le"
+                        },
+                        retyped_password : {
+                            equalTo : "mat khau khong chinh xac"
+                        },
+                        hometown : {
+                            required : "hay chon que quan"
+                        },
+                        global : {
+                            required : "chon quoc tich"
+                        },
+                        class : {
+                            required : "chon lop"
+                        },
+                        gender : {
+                            required : "chon gioi tinh"
+                        },
+                        'hobbies[]' : {
+                            required : "chon so thich",
+                            minlength : "chon it nhat 1 so thich",
+                        }
+                    }
+                }
+            );
+            console.console.log(name.val);
+
+        });
+    </script>
+    
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
+
+<style>
+    .error{
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+	<h1>Them Sinh Vien</h1>
+	<form action="ex1.php" method="POST" id="myForm">
+		<table border="1">
+			<tr>
+				<td>Ho ten</td>
+				<td><input type="text" name="fullname" > </td>
+			</tr>
+			<tr>
+				<td>Ngay sinh</td>
+				<td><input type="date" name="date" ></td>
+			</tr>
+			<tr>
+				<td>Gioi tinh</td>
+				<td><input type="radio" name="gender" value="1" >nam
+					<input type="radio" value="0" name="gender">nu
+				</td>
+			</tr>
+			<tr>
+				<td>Que quan</td>
+				<td><select name="hometown">
+					<option value="">chon<option>
+					<option value="1">An Giang<option>
+					<option value="2">Bà Rịa – Vũng Tàu<option>
+					<option value="3">Bắc Giang<option>
+					<option value="4">Bắc Kạn<option>
+					<option value="5">Bạc Liêu<option>
+					<option value="6">Bắc Ninh<option>
+					<option value="7">Bến Tre<option>
+					<option value="8">Bình Định<option>
+					<option value="9">Bình Dương<option>
+					<option value="10">Bình Phước<option>
+					<option value="11">Bình Thuận<option>
+					<option value="12">Cà Mau<option>
+					<option value="13">Cần Thơ<option>
+					<option value="14">Cao Bằng<option>
+					<option value="15">Đà Nẵng<option>
+					<option value="16">Đắk Lắk<option>
+					<option value="17">Đắk Nông<option>
+					<option value="18">Điện Biên<option>
+					<option value="19">Đồng Nai<option>
+					<option value="20">Đồng Tháp<option>
+					<option value="21">Gia Lai<option>
+					<option value="22">Hà Giang<option>
+					<option value="23">Hà Nam<option>
+					<option value="24">Hà Nội<option>
+					<option value="25">Hà Tĩnh<option>
+					<option value="26">Hải Dương<option>
+					<option value="27">Hải Phòng<option>
+					<option value="28">Hậu Giang<option>
+					<option value="29">Hòa Bình<option>
+					<option value="30">Hưng Yên<option>
+					<option value="31">Khánh Hòa<option>
+					<option value="33">Kon Tum<option>
+					<option value="34">Lai Châu<option>
+					<option value="35">Lâm Đồng<option>
+					<option value="36">Lạng Sơn<option>
+					<option value="37">Lào Cai<option>
+					<option value="38">Long An<option>
+					<option value="39">Nam Định<option>
+					<option value="40">Nghệ An<option>
+					<option value="41">Ninh Bình<option>
+					<option value="42">Ninh Thuận<option>
+					<option value="43">Phú Thọ<option>
+					<option value="44">Phú Yên<option>
+					<option value="45">Quảng Bình<option>
+					<option value="46">Quảng Nam<option>
+					<option value="47">Quảng Ngãi<option>
+					<option value="48">Quảng Ninh<option>
+					<option value="49">Quảng Trị<option>
+					<option value="50">Sóc Trăng<option>
+<option value="51">Sơn La<option>
+					<option value="52">Tây Ninh<option>
+					<option value="53">Thái Bình<option>
+					<option value="54">Thái Nguyên<option>
+					<option value="55">Thanh Hóa<option>
+					<option value="56">Thừa Thiên Huế<option>
+					<option value="57">Tiền Giang<option>
+					<option value="58">TP Hồ Chí Minh<option>
+					<option value="59">Trà Vinh<option>
+					<option value="60">Tuyên Quang<option>
+					<option value="61">Vĩnh Long<option>
+					<option value="62">Vĩnh Phúc<option>
+					<option value="63">Yên Bái<option>
+
+				</select></td>
+
+			</tr>
+			<tr>
+				<td>Quoc tich</td>
+				<td>
+				<select name="global">
+					<option value="">chon<option>
+					<option value="1">An Giang<option>
+					<option value="2">Bà Rịa – Vũng Tàu<option>
+					<option value="3">Bắc Giang<option>
+					<option value="4">Bắc Kạn<option>
+					<option value="5">Bạc Liêu<option>
+					<option value="6">Bắc Ninh<option>
+					<option value="7">Bến Tre<option>
+					<option value="8">Bình Định<option>
+					<option value="9">Bình Dương<option>
+					<option value="10">Bình Phước<option>
+					<option value="11">Bình Thuận<option>
+					<option value="12">Cà Mau<option>
+					<option value="13">Cần Thơ<option>
+					<option value="14">Cao Bằng<option>
+					<option value="15">Đà Nẵng<option>
+					<option value="16">Đắk Lắk<option>
+					<option value="17">Đắk Nông<option>
+					<option value="18">Điện Biên<option>
+					<option value="19">Đồng Nai<option>
+					<option value="20">Đồng Tháp<option>
+					<option value="21">Gia Lai<option>
+					<option value="22">Hà Giang<option>
+					<option value="23">Hà Nam<option>
+					<option value="24">Hà Nội<option>
+					<option value="25">Hà Tĩnh<option>
+					<option value="26">Hải Dương<option>
+					<option value="27">Hải Phòng<option>
+					<option value="28">Hậu Giang<option>
+					<option value="29">Hòa Bình<option>
+					<option value="30">Hưng Yên<option>
+					<option value="31">Khánh Hòa<option>
+					<option value="33">Kon Tum<option>
+					<option value="34">Lai Châu<option>
+					<option value="35">Lâm Đồng<option>
+					<option value="36">Lạng Sơn<option>
+					<option value="37">Lào Cai<option>
+					<option value="38">Long An<option>
+					<option value="39">Nam Định<option>
+					<option value="40">Nghệ An<option>
+					<option value="41">Ninh Bình<option>
+					<option value="42">Ninh Thuận<option>
+					<option value="43">Phú Thọ<option>
+					<option value="44">Phú Yên<option>
+					<option value="45">Quảng Bình<option>
+					<option value="46">Quảng Nam<option>
+					<option value="47">Quảng Ngãi<option>
+					<option value="48">Quảng Ninh<option>
+					<option value="49">Quảng Trị<option>
+					<option value="50">Sóc Trăng<option>
+					<option value="51">Sơn La<option>
+					<option value="52">Tây Ninh<option>
+					<option value="53">Thái Bình<option>
+					<option value="54">Thái Nguyên<option>
+					<option value="55">Thanh Hóa<option>
+<option value="56">Thừa Thiên Huế<option>
+					<option value="57">Tiền Giang<option>
+					<option value="58">TP Hồ Chí Minh<option>
+					<option value="59">Trà Vinh<option>
+					<option value="60">Tuyên Quang<option>
+					<option value="61">Vĩnh Long<option>
+					<option value="62">Vĩnh Phúc<option>
+					<option value="63">Yên Bái<option>
+				</select>
+			</td>
+			</tr>
+			<tr>
+				<td>Dia chi</td>
+				<td><input type="text" name="address"></td>
+			</tr>
+            <tr>
+				<td>thu nhap</td>
+				<td><input type="text" name="income"></td>
+			</tr>
+			<tr>
+				<td>So thich</td>
+				<td><input type="checkbox" name="hobbies[]" value="1">The thao
+					<input type="checkbox" name="hobbies[]" value="2">Du lich
+					<input type="checkbox" name="hobbies[]" value="4">Phim anh
+					<input type="checkbox" name="hobbies[]" value="8">Am Thuc
+				</td>
+			</tr>
+			<tr>
+				<td>Mau ye thich</td>
+				<td><input type="color" name="favourite_color" ></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="emal" name="email" id="email" class="email" ></td>
+			</tr>
+			<tr>
+				<td>Trang fb</td>
+				<td><input type="url" name="facebook"></td>
+			</tr><tr>
+				<td>phone</td>
+				<td><input type="tel" name="phone"></td>
+			</tr>
+			<tr>
+				<td>Lop</td>
+				<td>
+					<select name="class">
+                        <option value="">chon</option>
+						<option value="1">KITS 2022</option>
+						<option value="2" >FPT</option>
+						<option value="3">VNU</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Ten dang nhap</td>
+					<td><input type="text" name="dang nhap"></td>
+				</tr>
+				<tr>
+					<td>Mat khau</td>
+					<td><input type="password" id="password" name="password"></td>
+				</tr>
+                <tr>
+					<td>nhap lai mat khau</td>
+					<td><input type="password" name="retyped_password" ></td>
+				</tr>
+				<tr>
+					<td>Anh the</td>
+					<td><input type="file" name="image"> </td>
+				</tr>
+				<tr>
+					<td>Mo ta</td>
+					<td>
+						<textarea id="mytextarea" placeholder="nhap gi vao day" name="description"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="dang nap" value="gui"></td>
+					<td><input type="reset" name="dang nhap" value="Mhap lai"></td>
+				</tr>
+				
+
+
+			</table>
+		</form>
+		
+	</body>
+	</html>

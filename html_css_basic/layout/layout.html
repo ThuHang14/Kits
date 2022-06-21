@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
+    <title>Document</title>
+  <style>
+    .angry-grid {
+       display: grid; 
+    
+       grid-template-rows: 1fr 1fr 1fr;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+       
+       gap: 5px;
+       height: 100%;
+       
+    }
+
+    body{
+      height: 700px;
+    }
+      
+    #item-0 {
+    
+       background-color: #ec091f; 
+       grid-row-start: 1;
+       grid-column-start: 1;
+    
+       grid-row-end: 2;
+       grid-column-end: 3;
+       
+    }
+    #item-1 {
+    
+       background-color: #5bd777; 
+       grid-row-start: 1;
+       grid-column-start: 3;
+    
+       grid-row-end: 3;
+       grid-column-end: 4;
+       
+    }
+    #item-2 {
+    
+       background-color: #2546b1; 
+       grid-row-start: 2;
+       grid-column-start: 1;
+    
+       grid-row-end: 3;
+       grid-column-end: 2;
+       
+    }
+    #item-3 {
+    
+       background-color: #21e441; 
+       grid-row-start: 2;
+       grid-column-start: 2;
+    
+       grid-row-end: 4;
+       grid-column-end: 3;
+       
+    }
+    #item-4 {
+    
+       background-color: #d84e13; 
+       grid-row-start: 3;
+       grid-column-start: 1;
+    
+       grid-row-end: 4;
+       grid-column-end: 2;
+       
+    }
+    #item-5 {
+    
+       background-color: #CD5779; 
+       grid-row-start: 3;
+       grid-column-start: 3;
+    
+       grid-row-end: 4;
+       grid-column-end: 6;
+       
+    }
+    #item-6 {
+    
+       background-color: #bb0ca4; 
+       grid-row-start: 1;
+       grid-column-start: 4;
+    
+       grid-row-end: 3;
+       grid-column-end: 6;
+       
+    }
+    img{
+      width: max-content;
+      height: max-content;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="angry-grid">
+      <div id="item-0">
+        <img src="https://i.pinimg.com/564x/2d/d3/3f/2dd33ff6765ace7facb06a3ba59e78c5.jpg" alt="">
+      </div>
+      <div id="item-1">&nbsp;</div>
+      <div id="item-2">&nbsp;</div>
+      <div id="item-3">&nbsp;</div>
+      <div id="item-4">&nbsp;</div>
+      <div id="item-5">&nbsp;</div>
+      <div id="item-6">&nbsp;</div>
+    </div>
+</body>
+</html>

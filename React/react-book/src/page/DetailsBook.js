@@ -6,9 +6,9 @@ const DetailBook = () => {
     const params = useParams();
     const [student, setStudent] = useState(null);
     useEffect(() => {
-        console.log('user use effect!!');
+        console.log(' render user ');
 
-        let url = 'https://62baa4fb573ca8f832881fa9.mockapi.io/book' + params.id;
+        let url = 'https://62baa4fb573ca8f832881fa9.mockapi.io/book/' + params.id;
 
         console.log(url);
         fetch(url)
@@ -31,7 +31,7 @@ const DetailBook = () => {
                     <div class="panel-body inf-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <strong>Book</strong>
+                                <h1>Book</h1>
                                 <br/>
                                 <div class="table-responsive">
                                     <table class="table table-user-information">
@@ -101,7 +101,7 @@ const DetailBook = () => {
                     </div>
                 </div>
             ) : (
-                'loading'
+                'loading....    '
             )}
         </>
     );

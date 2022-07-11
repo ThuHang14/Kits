@@ -14,43 +14,6 @@ const RenderBook = (props) => {
         setData(data.filter((a) => a.category === category));
     };
 
-    // const add_cart = async (id, name) => {
-    //     console.log(id + name);
-    //     try {
-    //         let res = await fetch(
-    //             'https://62baa4fb573ca8f832881fa9.mockapi.io/cart',
-    //             {
-    //                 method: 'POST',
-    //                 body: JSON.stringify({
-    //                     name: name,
-    //                     amount: 0,
-    //                     id: id,
-    //                 }),
-    //             }
-    //         );
-    //     } catch (e) {
-    //         console.log('error fetch add cart ' + e);
-    //     }
-    // };
-
-    // const  add_cart = (id,name,image) =>{
-    //     const request = {
-    //         method : 'POST',
-    //         headers : {
-    //             "name": name,
-    //             "image": image,
-    //             "amount": 0,
-    //             "id": id
-    //         },
-    //         body : JSON.stringify({
-    //             name : name
-    //         })
-    //
-    //     };
-    //
-    //     fetch('https://62baa4fb573ca8f832881fa9.mockapi.io/cart',request)
-    //         .then(reponse => reponse.json())
-    // }
 
     const  add_cart = async (id,name,image) =>{
         try{
@@ -63,7 +26,6 @@ const RenderBook = (props) => {
         } catch (e) {
             console.log("error axios")
         }
-
     }
 
     useEffect(() => {

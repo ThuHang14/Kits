@@ -78,4 +78,19 @@ public class test<entry> {
         System.out.println(sum);
         return sum;
     }
+
+    public boolean arrTang(int [] A){
+        if(A[A.length-1] > A[A.length-2]) {
+            System.out.println("khong phai day tang dan");
+            return false; }
+        else {
+        for (int i = 0; i < A.length-1; i++) {
+            if(A[i] >= A[i++]) {
+                System.out.println("khong phai day tang dan");
+                return false;
+            }
+        } }
+        System.out.println("la day tang dan");
+        return true;
+    }
 }

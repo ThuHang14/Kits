@@ -31,8 +31,15 @@ public class ex1 {
 //        }
 
 //         Cho mảng int [] D={5, 1, 9, 10, 16, 4, 6, 8, 3}.  Hãy xác định và in dãy con tăng dần dài nhất
-        int [] D={5, 1, 9, 10, 16, 4, 6, 8, 13,23};
-        System.out.println(methodEx1.ascendingMax(D));
+//        int [] D={5, 1, 9, 10, 16, 4, 6, 8, 13,23};
+//        System.out.println(methodEx1.ascendingMax(D));
+
+//         int [] A={5, 3, 7, 8, 4, 6, 8, 3}.  Hãy xác định và in tất cả các dãy con tăng dần dài nhất cùng các vị trí bắt đầu xuất hiện của nó
+             int [] E={5, 1, 9, 10, 16,20,22, 4, 6, 8, 3,1, 9, 10, 16};
+        int [] E2={5, 1, 9, 10, 16,20,220, 4, 6, 8, 3,1, 9, 10, 16};
+
+//        methodEx1.ascendingMaxAndIndex(E);
+        methodEx1.ascendingMaxAndIndex(E2);
     }
 
 }

@@ -65,4 +65,40 @@ public class methodEx1 {
         }
         return arrMax;
     }
+
+    public void ascendingMaxAndIndex(int[] D) {
+        String arrMax = "";
+        int count = 1;
+        int index = 0;
+        int max = 1;
+        int sum = D[0];
+
+        for (int i = 0, k = 1; k <= D.length-1; i++,k++) {
+            if (D[i] < D[k] && sum < 100 && sum >20) {
+                count++;
+                sum += D[i];
+
+            }
+            else  if (D[i] > D[k] && max < count ) {
+                sum =0;
+                max = count;
+                index = i;
+                count = 1;
+            }
+        }
+        if ( max < count ) {
+            max = count;
+            index = D.length-1;
+        }
+
+        int start = index - max +1;
+
+        for (int i =start ; i <=index ; i++) {
+            arrMax += D[i] + " ";
+        }
+
+
+        System.out.println("Do dai : " +max + "; Tong : " +sum + " ! ");
+        System.out.println("Day do la : " +arrMax);
+    }
 }

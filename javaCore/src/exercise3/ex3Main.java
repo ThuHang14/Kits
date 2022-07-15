@@ -7,7 +7,7 @@ public class ex3Main {
 c3_2();
     }
     public static void c3_2(){
-        int [] A={5, 1, 9, 10,160, 4,6, 8, 13};
+        int [] A={5, 1, 9, 10,160, -13,-2,-1,0};
         int [] arrLength = new int[A.length];
         String [] arrItem = new String[A.length];
         int [] sum = new int[A.length];
@@ -17,14 +17,15 @@ c3_2();
         int count = 0;
         int maxItem = 1;
 
-        for (int j=0, i = 1; i < A.length; i++) {
-            if(A[j++] > A[i]){
+        for (int j=0, i = 1; i < A.length; i++,j++) {
+            if(A[j] > A[i]){
                 arrItem[count] = item;
                 arrLength[count++] = maxItem;
                 item = " "+A[i];
+                sum[count] += A[i];
                 maxItem = 1;
             }else {
-                if(sum[count] <=100){
+                if(sum[count]+A[i] <=100){
                 item += " " + A[i];
                 sum[count] += A[i];
                 maxItem++; }
@@ -52,6 +53,8 @@ c3_2();
                 System.out.println("sum : " + sum[max[0]]);
                 System.out.println("arr : " + arrItem[max[0]]);
                 return;
+            }else {
+                arrLength[max[0]] = -1;
             }
 
         }

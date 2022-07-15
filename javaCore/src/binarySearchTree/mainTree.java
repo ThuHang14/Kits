@@ -118,6 +118,9 @@ class BSTree {
     }
 
 
+    void delete(int x){
+
+    }
 }
 
 

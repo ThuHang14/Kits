@@ -1,0 +1,5 @@
+Tran Van B;22;Hai Duong;2002;7.8
+Tran Van C;23;Hai Phong;2001;5
+Tran Van D;24;Ha Noi;2003;6.8
+Tran Van E;25;Ha Nam;2004;7
+Tran Van F;26;Ha Tinh;2005;8

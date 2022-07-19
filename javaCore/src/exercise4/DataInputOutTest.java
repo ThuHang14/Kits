@@ -10,6 +10,7 @@ public class DataInputOutTest {
         String str = "1 20 30 6 12 45";
         Write(str, "test.txt");
 
+<<<<<<< HEAD
 //        doc test.txt
         try (FileInputStream fin = new FileInputStream("test.txt")) {
             byte[] bytes = new byte[fin.available()];
@@ -138,5 +139,15 @@ public class DataInputOutTest {
         }
         System.out.println("sort : " + Arrays.toString(a));
         return a;
+=======
+        char[] chars = new char[128];
+
+        int charsRead = reader.read(chars, 0, chars.length);
+        while(charsRead != -1) {
+            System.out.println(new String(chars, 0, charsRead));
+            charsRead = reader.read(chars, 0, chars.length);
+        }
+
+>>>>>>> 77305240af94d6893ac8515f018359600ac55b47
     }
 }

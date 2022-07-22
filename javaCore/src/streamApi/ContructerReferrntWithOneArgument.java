@@ -1,8 +1,5 @@
 package streamApi;
 
-import java.util.function.BiFunction;
-import java.util.function.Function;
-
 import exercise4.Student;
 
 interface MyFunctionalInerface{

@@ -1,0 +1,9 @@
+sql server
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Abc@123456789" --name sql-server-2019-container -p 1435:1433 -v my-volume-1:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+
+mysql
+docker run --name mysql -v D/Kist/Database:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 -p 8080:3306 -d mysql:latest
+docker run --name phpMysql8080 -d --link mysql:db -p 8081:80 phpmyadmin/phpmyadmin
+
+					
+		

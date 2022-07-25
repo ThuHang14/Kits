@@ -32,3 +32,7 @@ phone CHAR(10),
 admin TINYINT(1),
 active TINYINT(1)
 )
+
+Console trong java được sử dụng để lấy nội dung được nhập từ giao diện console. Nó cung cấp các phương thức để đọc văn bản và mật khẩu.
+update delete :             Statement stm = connection().createStatement(); // stm.executeUpdate(query);
+lay ra :  Statement stm = connection().createStatement(); //  ResultSet rs = stm.executeQuery(query);

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface EmployeeDao {
     public Employee getEmployeeById(int id); //Dùng cho TRUY VẤN (SELECT)
-    public Employee getEmployeeByName(String name); //Dùng cho TRUY VẤN (SELECT)
+    public List<Employee> getEmployeeByName(String name); //Dùng cho TRUY VẤN (SELECT)
     public void getEmployeeByEmail(String email); //Dùng cho TRUY VẤN (SELECT)
     public String getNameById(int id); //Dùng cho TRUY VẤN (SELECT)
     public List<Employee> getAllEmployees(); //Dùng cho TRUY VẤN (SELECT)

@@ -14,6 +14,23 @@ public class Main {
 //        goi phuong thuc tra ve danh sach nhan vien
         employeeList = empDapImp.getAllEmployees();
 
-//        employeeList.forEach(System.out::println);
+        employeeList.forEach(System.out::println);
+
+        String findByName = empDapImp.getNameById(2);
+        System.out.println(findByName);
+
+        empDapImp.getEmployeeByEmail("A@gmail.com");
+
+      empDapImp.getEmployeeByName("nguyen van A");
+
+        Employee e = empDapImp.getEmployeeById(3);
+
+        System.out.println(e);
+
+        empDapImp.saveEmployee(e);
+
+        empDapImp.deleteEmployee(e);
+
+        empDapImp.updateEmployee(e);
     }
 }

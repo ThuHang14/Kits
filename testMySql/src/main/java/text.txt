@@ -41,3 +41,18 @@ lay ra :  Statement stm = connection().createStatement(); //  ResultSet rs = stm
 - Java JDBC là một java API được sử dụng để kết nối và thực hiện truy vấn với cơ sở dữ liệu. JDBC API sử dụng trình điều khiển jdbc để kết nối với cơ sở dữ liệu.
 
 - API (Application programming interface - Giao diện lập trình ứng dụng) là một tài liệu có chứa mô tả về tất cả các tính năng của một sản phẩm hoặc phần mềm. Nó đại diện cho các lớp và các giao diện (interface) mà các chương trình phần mềm có thể làm theo để giao tiếp với nhau. Một API có thể được tạo cho các ứng dụng, thư viện, hệ điều hành, ...
+
+-   String query2 = "INSERT INTO employee (fullName,email) VALUES(?,?)";
+          PreparedStatement ps = conn.prepareStatement(query2);
+          ps.setString(1,"aaa");
+          ps.setString(2,"bbb");
+
+- java confirm dialog (java swing)
+
+- private Date dod; //Util.sql
+
+-SELECT s.name
+ FROM Student s
+ INNER JOIN Book_borrow b ON b.Student_ID = s.ID
+ WHERE s.name = 'BPM Programming', b.Date_Of_Borrow < DATE(DATE_sub(NOW(), INTERVAL 7 DAY_HOUR))
+ GROUP BY s.name

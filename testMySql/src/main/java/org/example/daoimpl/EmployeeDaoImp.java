@@ -2,14 +2,16 @@ package org.example.daoimpl;
 
 import org.example.dao.EmployeeDao;
 import org.example.model.Employee;
+import org.example.ultils.DBCconnection;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class EmployeeDaoImp implements EmployeeDao {
 
-    String dbUrl = "jdbc:mysql://localhost:3306/Employee";
+    String dbUrl = "jdbc:mysql://localhost:8080/Employee";
 
     public Connection connection() {
         Connection conn = null;
@@ -75,7 +77,7 @@ public class EmployeeDaoImp implements EmployeeDao {
         }
     }
 
-    public void getEmployeeByEmail(String email) {
+    public List<Employee> getEmployeeByEmail(String email) {
         List<Employee> employeeList = new ArrayList<>();
         String query = "SELECT * FROM `employee` e WHERE e.email = \'" + email + "\'";
         try {
@@ -100,6 +102,7 @@ public class EmployeeDaoImp implements EmployeeDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return employeeList;
     }
 
     public String getNameById(int id) {
@@ -137,12 +140,16 @@ public class EmployeeDaoImp implements EmployeeDao {
     public List<Employee> getAllEmployees() {
 //        b1 : ket noi mySql
         List<Employee> employeeList = new ArrayList<Employee>();
-        Connection conn = null;
+//        Connection conn = null;
         try {
-            conn = DriverManager.getConnection(dbUrl, "root", "123");
+//            conn = DriverManager.getConnection(dbUrl, "root", "123");
+
+            DBCconnection dbc = new DBCconnection();
+            dbc.connectDB();
 //            b2: dinh nghia truy van va thuc hien truy van
             String sql = "SELECT * from employee";
-            PreparedStatement ps = conn.prepareStatement(sql);
+//            PreparedStatement ps = conn.prepareStatement(sql);
+            PreparedStatement ps = dbc.getConn().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 //          b3 :  xu li ket qua tra ve
             while (rs.next()) {
@@ -160,7 +167,8 @@ public class EmployeeDaoImp implements EmployeeDao {
 
             }
 //            b4 dong ket noi
-            rs.close();
+//            rs.close();
+            dbc.disConnectDb();
             return employeeList;
 
         } catch (SQLException e) {
@@ -182,6 +190,9 @@ public class EmployeeDaoImp implements EmployeeDao {
                 + "\'" + emp.getOutSideServiceNumber() + "\',"
                 + "\'" + emp.getTotalSalary() + "\'"
                 + ");";
+
+
+
         try {
             Statement stm = connection().createStatement();
             stm.executeUpdate(query);
@@ -192,7 +203,6 @@ public class EmployeeDaoImp implements EmployeeDao {
         }
 
     }
-
     public void updateEmployee(Employee emp) {
         String query = "UPDATE employee e \n" +
                 "SET e.fullName='" + emp.getFullName() + "\' " +

@@ -11,6 +11,9 @@ public class Employee {
     private int outSideServiceNumber;
     private double totalSalary;
 
+    public Employee(String name, String mail) {
+    }
+
     @Override
     public String toString() {
         return "Employee{" +

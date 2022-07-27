@@ -1,0 +1,18 @@
+- Java Platform Enterprise Edition (Hoặc Java EE) là một bộ sưu tập Java APIs thuộc sở hữu của Oracle mà các lập trình viên phát triển phần mềm có thể sử dụng để lập trình ứng dụng phía máy chủ (có thể gọi nôm là website :D).
+- Application service : ApacheTomcat
+- So sánh J2EE với Spring Framework
+- String[] favorite = request.getParameterValues("favorite");
+- String gender = request.getParameter("gender");
+ => lay du lieu tu param  =>  http://localhost:8080/webproject_war_exploded/form/formSave.jsp?gender=Male&favorite=C&favorite=PHP&name=Nguyen+Thanh+Tam
+
+ - contructor : trung ten class , co loai tuong minh va k tuong minh
+ - // jdbc lay database -> resulset -> list
+ - list != array list ?
+
+ - CREATE TABLE users(
+   id INT PRIMARY KEY AUTO_INCREMENT,
+       name TEXT ,
+       email TEXT,
+       country TEXT
+   )
+

@@ -1,0 +1,11 @@
+CREATE TABLE todos(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title TEXT,
+    desciption TEXT,
+    is_done BIT(1) NOT NULL,
+    target_date DATE ,
+    user_id INT,
+   FOREIGN KEY (user_id) REFERENCES users (id)
+)
+
+- ham tao

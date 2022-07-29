@@ -15,9 +15,13 @@ public class UserDao {
     //    private static final String
     private static String SELECT_ALL_USERS = "SELECT * FROM users";
     private static String SELECT_USERS_BY_NAME = "SELECT * FROM `users` WHERE name LIKE '%";
-    private static String DELETE_USER_BY_ID = "DELETE FROM users WHERE id = ?";
+    private static String DELETE_USER_BY_ID = "DELETE FROM users WHERE id = ? ";
+    private static String SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ? ";
+
+    //    DELETE FROM users WHERE id = 10 and 9
     private static final String INSERT_USERS_SQL = "insert into users (name, email, country) values (?, ?, ?);";
-    private static String UPDATE_NAME_USERS_BY_ID = "UPDATE `users` SET `name` = ? WHERE id = ?;";
+
+    private static String UPDATE_USERS_BY_ID = "UPDATE users SET name= ? , email = ? , country= ? WHERE id = ? ";
 
 
     protected Connection connect() {
@@ -76,5 +80,68 @@ public class UserDao {
         return userList;
     }
 
+    public boolean deleteUserById(int id) {
+        boolean check = false;
+        try {
+            PreparedStatement preparedStatement = connect().prepareStatement(DELETE_USER_BY_ID);
+            preparedStatement.setInt(1, id);
+            check = preparedStatement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
 
+    public void updateUser(User user) {
+
+        try {
+            PreparedStatement preparedStatement = connect().prepareStatement(UPDATE_USERS_BY_ID);
+            preparedStatement.setInt(1, user.getId());
+            preparedStatement.setString(2, user.getName());
+            preparedStatement.setString(3, user.getEmail());
+            preparedStatement.setString(4, user.getCountry());
+
+            preparedStatement.executeUpdate();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public boolean insertNewUser(User user) {
+        boolean check = false;
+        try {
+            PreparedStatement preparedStatement = connect().prepareStatement(INSERT_USERS_SQL);
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getCountry());
+            check = preparedStatement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
+
+    public User getUserById(int id) {
+        User u = new User();
+
+        try {
+            PreparedStatement preparedStatement = connect().prepareStatement(SELECT_USER_BY_ID);
+            preparedStatement.setInt(1, id);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                String name = rs.getString("name");
+                String email = rs.getNString("email");
+                String country = rs.getNString("country");
+
+                u.setName(name);
+                u.setEmail(email);
+                u.setCountry(country);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return u;
+    }
 }

@@ -1,12 +1,12 @@
-package com.example.webproject.web;
+package com.example.todolistjsp.web;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "UserServlet", value = "/UserServlet")
-public class UserServlet extends HttpServlet {
+@WebServlet(name = "LoginController", value = "/LoginController")
+public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

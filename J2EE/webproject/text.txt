@@ -16,3 +16,7 @@
        country TEXT
    )
 
+- PreparedStatement
+- Statement
+
+- java servlet =! jsp
